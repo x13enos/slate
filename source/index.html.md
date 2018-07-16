@@ -706,18 +706,17 @@ Parameter | Description
 --------- | -----------
 model_id | Model ID or name
 
-# Global Values
+# Attribute options
 
-## List of all global values
+## List of all attribute options
 
 ```ruby
 client = Specs::Client.new(username, password)
-client.global_values.all
+client.attribute_options.all
 ```
 
 ```shell
-#all global values
-curl "http://example.com/api/v1/global_values/"
+curl "http://example.com/api/v1/attribute_options/"
   -u username:password
 ```
 
@@ -735,22 +734,21 @@ curl "http://example.com/api/v1/global_values/"
 }
 ```
 
-This endpoint returns list of all global values.
+This endpoint returns list of all attribute options.
 
 ### HTTP Request
 
-`GET http://example.com/api/v1/global_values`
+`GET http://example.com/api/v1/attribute_options`
 
-## Get a global value by name
+## Get a attribute option by name
 
 ```ruby
 client = Specs::Client.new(username, password)
-client.global_values.by_name("gender")
+client.attribute_option.by_name("gender")
 ```
 
 ```shell
-#all global values
-curl "http://example.com/api/v1/global_values/gender"
+curl "http://example.com/api/v1/attribute_option/gender"
   -u username:password
 ```
 
@@ -762,12 +760,12 @@ curl "http://example.com/api/v1/global_values/gender"
 }
 ```
 
-This endpoint returns a certain global value.
+This endpoint returns a certain attribute option .
 
 ### HTTP Request
 
-`GET http://example.com/api/v1/global_values/ID`
+`GET http://example.com/api/v1/attribute_options/ID`
 
 Parameter | Description
 --------- | -----------
-ID | Global value name
+ID | Attribute option name
