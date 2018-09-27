@@ -277,16 +277,16 @@ Parameter | Description
 --------- | -----------
 model_id | The model ID or name
 
-## Get a list by model number ID
+## Get a list by model number
 
 ```ruby
   client = Specs::Client.new(username, password)
-  client.ccspecs.by_model_number_id("105")
+  client.ccspecs.by_model_number_id("10-25-KIT-12")
 ```
 
 ```shell
   curl "http://example.com/api/v1/ccspecs/"
-    -u username:password -d model_number_id=25
+    -u username:password -d model_number_id="10-25-KIT-12"
 ```
 
 
@@ -300,7 +300,7 @@ model_id | The model ID or name
       "name": "Aerospace Breguet E79362",
       "brand_name": "Breguet",
       "model_name": "Aerospace",
-      "model_number": "E79362",
+      "model_number": "10-25-KIT-12",
       "thumb" : "/placeholder.jpg"
     },
     {
@@ -308,7 +308,7 @@ model_id | The model ID or name
       "name": "Air-King 114200",
       "brand_name": "Breguet",
       "model_name": "Air-King",
-      "model_number": "114200",
+      "model_number": "10-25-KIT-12",
       "thumb" : "/placeholder.jpg"
     }
   ]
@@ -316,7 +316,7 @@ model_id | The model ID or name
 }
 ```
 
-This endpoint returns Watch Specs by the model number ID.
+This endpoint returns Watch Specs by the model number.
 
 ### HTTP Request
 
@@ -326,7 +326,7 @@ This endpoint returns Watch Specs by the model number ID.
 
 Parameter | Description
 --------- | -----------
-model_number_id | The model number ID
+model_number_id | The model number
 
 ## Create Watch Spec
 
