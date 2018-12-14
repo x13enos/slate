@@ -186,6 +186,7 @@ ID | The Watch Spec number
 {
   "ccspecs": [
     {
+      "alternate_reference_numbers": ["5290 50","5290 50 07","5290-50"],
       "ccspec_number": "CCS-BRE-1-YUX-1",
       "name": "Aerospace Breguet E79362",
       "brand_name": "Breguet",
@@ -194,6 +195,7 @@ ID | The Watch Spec number
       "thumb" : "/placeholder.jpg"
     },
     {
+      "alternate_reference_numbers": ["5290 50","5290 50 07","5290-50"],
       "ccspec_number": "CCS-ROL-114200-EED-0",
       "name": "Air-King 114200",
       "brand_name": "Breguet",
@@ -245,6 +247,7 @@ brand_id | The brand ID or name
 {
   "ccspecs": [
     {
+      "alternate_reference_numbers": ["5290 50","5290 50 07","5290-50"],
       "ccspec_number": "CCS-BRE-1-YUX-1",
       "name": "Aerospace Breguet E79362",
       "brand_name": "Breguet",
@@ -253,6 +256,7 @@ brand_id | The brand ID or name
       "thumb" : "/placeholder.jpg"
     },
     {
+      "alternate_reference_numbers": ["5290 50","5290 50 07","5290-50"],
       "ccspec_number": "CCS-ROL-114200-EED-0",
       "name": "Air-King 114200",
       "brand_name": "Breguet",
@@ -296,20 +300,28 @@ model_id | The model ID or name
 {
   "ccspecs": [
     {
+      "alternate_reference_numbers": ["5290 50","5290 50 07","5290-50"],
       "ccspec_number": "CCS-BRE-1-YUX-1",
       "name": "Aerospace Breguet E79362",
       "brand_name": "Breguet",
       "model_name": "Aerospace",
       "model_number": "10-25-KIT-12",
-      "thumb" : "/placeholder.jpg"
+      "thumb" : "/placeholder.jpg",
+      "unique_attributes": {
+          "dial_colors": ["Black"]
+      }
     },
     {
+      "alternate_reference_numbers": ["5290 50","5290 50 07","5290-50"],
       "ccspec_number": "CCS-ROL-114200-EED-0",
       "name": "Air-King 114200",
       "brand_name": "Breguet",
       "model_name": "Air-King",
       "model_number": "10-25-KIT-12",
-      "thumb" : "/placeholder.jpg"
+      "thumb" : "/placeholder.jpg",
+      "unique_attributes": {
+          "dial_colors": ["White"]
+      }
     }
   ]
 
@@ -328,7 +340,7 @@ Parameter | Description
 --------- | -----------
 model_number_id | The model number
 
-## Create Watch Spec
+## Create Watch Spec Suggestion
 
 ```ruby
   params = {
@@ -338,7 +350,7 @@ model_number_id | The model number
     "case_back" => "Steel",
     "case_materials" => ["Stainless Steel"],
     "case_size" => "42.0",
-    "crystal_materials" => ["Diamond"],
+    "crystal_materials" => "Diamond",
     "dial_colors" => ["Black"],
     "gender" => "Men",
     "model_name" => "50s Presidents",
@@ -369,7 +381,7 @@ model_number_id | The model number
 }
 ```
 
-This endpoint creates new Watch Spec.
+This endpoint creates new Watch Spec Suggestion.
 
 ### HTTP Request
 
@@ -389,7 +401,7 @@ case_materials | Array | Yes | Case materials
 band_materials | Array | Yes | Band materials
 bezel_materials | Array | Yes | Bezel materials
 dial_colors | Array | Yes | Dial colors
-crystal_materials | Array | Yes | Crystal materials
+crystal_materials | String | Yes | Crystal materials
 case_back | String | Yes | Case back
 analog_digital | String | Yes | Type of display
 name | String | No | Name
@@ -403,19 +415,21 @@ case_thickness | Float | No | Case thickness
 lug_width | Float | No | Lug width
 water_resistance | Float | No | Water resistance
 bracelet_name | String | No | Bracelet name
-bezel_insert_colors | Array | NO | Bezel insert colors
-bezel_insert_materials | Array | NO | Bezel insert materials
-bezel_features | Array | NO | Bezel features
+bezel_insert_colors | Array | No | Bezel insert colors
+bezel_insert_materials | Array | No | Bezel insert materials
+bezel_features | Array | No | Bezel features
 diamond_dial | Boolean | No | Diamond dial
-complications | Array | NO | Complications
-calendar_type | String | NO | Calendar type
-manuf_caliber | String | NO | Manufacturer caliber
-base_caliber | String | NO | Base caliber
-power_reserve | String | NO | Power reserve
-jewels | String | NO | Jewels
-manuf_diamonds | Boolean | NO | Manufacturer diamonds
-years_released | String | NO | Years released
-years_stopped | String | NO | Years stopped
+complications | Array | No | Complications
+calendar_type | String | No | Calendar type
+manuf_caliber | String | No | Manufacturer caliber
+base_caliber | String | No | Base caliber
+power_reserve | String | No | Power reserve
+jewels | String | No | Jewels
+manuf_diamonds | Boolean | No | Manufacturer diamonds
+years_released | String | No | Years released
+years_stopped | String | No | Years stopped
+aftermarket_additions | Boolean | No | Aftermarket Additions
+aftermarket_replacements | Boolean | No | Aftermarket Replacements
 
 # Brands
 
